@@ -25,11 +25,12 @@ import { MapsComponent } from './maps/maps.component';
       { path: 'products/:productId', component: ProductDetailsComponent},
       { path: 'cart', component: CartComponent },
       { path: 'shipping', component: ShippingComponent },
+      { path: 'maps', component: MapsComponent },
     ]),
     BrowserModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyClXjYs15wWqVck-XQfyM4BvB6-2Iyt-Ow'
-    }),
+    })
     
   ],
   declarations: [
