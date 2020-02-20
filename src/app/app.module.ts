@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AgmCoreModule } from '@agm/core';
 
 import { AppRootComponent } from './app-root.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
@@ -12,6 +13,7 @@ import { CartService } from './cart.service';
 import { CartComponent } from './cart/cart.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ShippingComponent } from './shipping/shipping.component';
+import { MapsComponent } from './maps/maps.component';
 
 @NgModule({
   imports: [
@@ -23,7 +25,12 @@ import { ShippingComponent } from './shipping/shipping.component';
       { path: 'products/:productId', component: ProductDetailsComponent},
       { path: 'cart', component: CartComponent },
       { path: 'shipping', component: ShippingComponent },
-    ])
+    ]),
+    BrowserModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyClXjYs15wWqVck-XQfyM4BvB6-2Iyt-Ow'
+    }),
+    
   ],
   declarations: [
     AppRootComponent,
@@ -32,7 +39,8 @@ import { ShippingComponent } from './shipping/shipping.component';
     ProductAlertsComponent,
     ProductDetailsComponent,
     CartComponent,
-    ShippingComponent
+    ShippingComponent,
+    MapsComponent
   ],
   bootstrap: [ AppRootComponent ],
   providers: [CartService]
