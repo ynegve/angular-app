@@ -14,6 +14,7 @@ import { CartComponent } from './cart/cart.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ShippingComponent } from './shipping/shipping.component';
 import { MapsComponent } from './maps/maps.component';
+import { HttpClient } from '@angular/common/http';
 
 @NgModule({
   imports: [
@@ -29,7 +30,7 @@ import { MapsComponent } from './maps/maps.component';
     ]),
     BrowserModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyClXjYs15wWqVck-XQfyM4BvB6-2Iyt-Ow'
+      apiKey: ''
     })
     
   ],
@@ -46,7 +47,10 @@ import { MapsComponent } from './maps/maps.component';
   bootstrap: [ AppRootComponent ],
   providers: [CartService]
 })
-export class AppModule { }
+export class AppModule { 
+}
+
+
 
 
 /*
